@@ -12,11 +12,9 @@
     <form id="form1" runat="server">
 
         <header>
-            <h1>
-                Blue Jack Cake
+            <h1>Blue Jack Cake
             </h1>
-            <strong>
-                Welcome to Blue Jack Cake
+            <strong>Welcome to Blue Jack Cake
             </strong>
             <hr />
         </header>
@@ -30,6 +28,10 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+
+        <footer>
+            Created By : Haris Weitani 1901459693
+        </footer>
 
 
     </form>

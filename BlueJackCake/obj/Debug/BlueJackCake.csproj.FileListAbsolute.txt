@@ -31,3 +31,36 @@ C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\T
 C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TM PSD\BlueJackCake\BlueJackCake\obj\Debug\BlueJackCake.csprojResolveAssemblyReference.cache
 C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TM PSD\BlueJackCake\BlueJackCake\obj\Debug\BlueJackCake.dll
 C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TM PSD\BlueJackCake\BlueJackCake\obj\Debug\BlueJackCake.pdb
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\ApplicationInsights.config
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\roslyn\csc.exe
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\roslyn\vbc.exe
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\roslyn\VBCSCompiler.exe
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\BlueJackCake.dll.config
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\BlueJackCake.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\BlueJackCake.pdb
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AI.Web.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AI.Web.xml
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\obj\Debug\BlueJackCake.csprojResolveAssemblyReference.cache
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\obj\Debug\BlueJackCake.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\obj\Debug\BlueJackCake.pdb
