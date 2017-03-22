@@ -29,6 +29,7 @@
             </asp:ContentPlaceHolder>
         </div>
 
+        <hr />
         <footer>
             Created By : Haris Weitani 1901459693
         </footer>
