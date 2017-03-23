@@ -1,5 +1,4 @@
-﻿
-using BlueJackCake.Helpers;
+﻿using BlueJackCake.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +18,9 @@ namespace BlueJackCake
                 Response.Redirect("Home.aspx");
             }
 
-            if (Request.Cookies["Username"] != null)
+            if (Request.Cookies["UserCookies"] != null)
             {
-                inputEmail.Text = Request.Cookies["Username"].Value;
+                inputEmail.Text = Request.Cookies["UserCookies"].Value;
             }
 
         }
@@ -38,16 +37,24 @@ namespace BlueJackCake
             if (result.Rows.Count > 0)
             {
                 var userLoginList = new List<String>();
+
+                if( isRemember.Checked )
+                {
+                    Response.Cookies["UserCookies"].Expires = DateTime.Now.AddHours(1);
+                }
+                else
+                {
+                    Response.Cookies["UserCookies"].Expires = DateTime.Now.AddHours(-1);
+                }
+                Response.Cookies["UserCookies"].Value = inputEmail.Text;
+
                 if (Application["userLoginList"] != null)
                 {
                     userLoginList = Application["userLoginList"] as List<String>;
                 }
                 userLoginList.Add(inputEmail.Text);
-
                 Application["userLoginList"] = userLoginList;
-
                 Session["userLogin"] = inputEmail.Text;
-
                 Response.Redirect("Home.aspx");
 
             }
