@@ -7,7 +7,7 @@ namespace BlueJackCake.Helpers
     public class DatabaseHelper
     {
         SqlConnection DbConnection;
-        String ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\UserDatabase.mdf;Integrated Security = True";
+        String ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MyDatabase.mdf;Integrated Security=True";
 
         public DatabaseHelper()
         {

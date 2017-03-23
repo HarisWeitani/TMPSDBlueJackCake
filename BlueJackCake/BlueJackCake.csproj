@@ -94,9 +94,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\UserDatabase.mdf" />
-    <Content Include="App_Data\UserDatabase_log.ldf">
-      <DependentUpon>UserDatabase.mdf</DependentUpon>
+    <Content Include="App_Data\MyDatabase.mdf" />
+    <Content Include="App_Data\MyDatabase_log.ldf">
+      <DependentUpon>MyDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
