@@ -1,6 +1,7 @@
 ﻿using BlueJackCake.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -61,6 +62,7 @@ namespace BlueJackCake
             else
             {
                 errorMessage.Text = "User not Found!";
+                this.errorMessage.ForeColor = Color.Red;
             }
 
         }

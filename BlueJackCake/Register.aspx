@@ -6,12 +6,14 @@
     <h2>Register
     </h2>
 
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <table>
         <tr>
             <td>Name</td>
             <td>:</td>
             <td>
                 <asp:TextBox ID="inputName" runat="server"></asp:TextBox>
+
             </td>
         </tr>
         <tr>
@@ -53,7 +55,7 @@
             <td>Address</td>
             <td>:</td>
             <td>
-                <textarea id="inputAddress" cols="20" rows="2"></textarea>
+                <asp:TextBox ID="inputAddress" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>

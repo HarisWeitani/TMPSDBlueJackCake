@@ -1,6 +1,0 @@
-﻿CREATE TABLE [dbo].[Member]
-(
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
-	[Email] VARCHAR(30) NOT NULL,
-	[Password] VARCHAR(30) NOT NULL
-)

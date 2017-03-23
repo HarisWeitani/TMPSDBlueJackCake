@@ -13,6 +13,15 @@ namespace BlueJackCake {
     public partial class Register {
         
         /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
         /// inputName control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace BlueJackCake {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox inputPhoneNumber;
+        
+        /// <summary>
+        /// inputAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox inputAddress;
         
         /// <summary>
         /// registerBtn control.

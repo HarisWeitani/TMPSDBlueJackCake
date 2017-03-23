@@ -16,7 +16,9 @@ namespace BlueJackCake
 
         protected void registerBtn_Click(object sender, EventArgs e)
         {
-
+            var query = String.Format(
+                "INSERT INTO Member VALUES ({0},{1},{2},{3},{4},{5},{6}",
+                inputEmail.Text,inputPassword.Text,inputName.Text,inputDOB.SelectedDate,inputPhoneNumber.Text,inputAddress.Text);
 
         }
     }
