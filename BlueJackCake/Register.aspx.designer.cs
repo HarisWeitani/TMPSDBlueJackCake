@@ -13,15 +13,6 @@ namespace BlueJackCake {
     public partial class Register {
         
         /// <summary>
-        /// ScriptManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
-        /// <summary>
         /// inputName control.
         /// </summary>
         /// <remarks>
@@ -29,6 +20,15 @@ namespace BlueJackCake {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox inputName;
+        
+        /// <summary>
+        /// nameVal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator nameVal;
         
         /// <summary>
         /// inputEmail control.
@@ -40,6 +40,15 @@ namespace BlueJackCake {
         protected global::System.Web.UI.WebControls.TextBox inputEmail;
         
         /// <summary>
+        /// emailVal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator emailVal;
+        
+        /// <summary>
         /// inputPassword control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace BlueJackCake {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox inputPassword;
+        
+        /// <summary>
+        /// passVal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator passVal;
         
         /// <summary>
         /// confirmPassword control.
@@ -58,13 +76,40 @@ namespace BlueJackCake {
         protected global::System.Web.UI.WebControls.TextBox confirmPassword;
         
         /// <summary>
-        /// inputDOB control.
+        /// cpassVal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar inputDOB;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator cpassVal;
+        
+        /// <summary>
+        /// cpassValCompare control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cpassValCompare;
+        
+        /// <summary>
+        /// userDOB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox userDOB;
+        
+        /// <summary>
+        /// dobVal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator dobVal;
         
         /// <summary>
         /// inputPhoneNumber control.
@@ -76,6 +121,15 @@ namespace BlueJackCake {
         protected global::System.Web.UI.WebControls.TextBox inputPhoneNumber;
         
         /// <summary>
+        /// phoneNumberVal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator phoneNumberVal;
+        
+        /// <summary>
         /// inputAddress control.
         /// </summary>
         /// <remarks>
@@ -83,6 +137,15 @@ namespace BlueJackCake {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox inputAddress;
+        
+        /// <summary>
+        /// addressVal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator addressVal;
         
         /// <summary>
         /// registerBtn control.
