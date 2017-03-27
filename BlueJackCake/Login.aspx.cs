@@ -14,57 +14,23 @@ namespace BlueJackCake
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["userLogin"] != null)
-            {
-                Response.Redirect("Home.aspx");
-            }
-
-            if (Request.Cookies["UserCookies"] != null)
-            {
-                inputEmail.Text = Request.Cookies["UserCookies"].Value;
-            }
-
+            if (Session["user"] != null) Response.Redirect("Home.aspx");
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            var query = String.Format(
-                "SELECT * FROM Member WHERE Email='{0}' AND Password='{1}'",
-                inputEmail.Text, inputPassword.Text);
 
-            var dbHelper = new DatabaseHelper();
-            var result = dbHelper.ExecuteQuery(query);
+            Member member = DatabaseRepositories.LoginUser(inputEmail.Text, inputPassword.Text);
 
-            if (result.Rows.Count > 0)
-            {
-                var userLoginList = new List<String>();
-
-                if( isRemember.Checked )
-                {
-                    Response.Cookies["UserCookies"].Expires = DateTime.Now.AddHours(1);
-                }
-                else
-                {
-                    Response.Cookies["UserCookies"].Expires = DateTime.Now.AddHours(-1);
-                }
-                Response.Cookies["UserCookies"].Value = inputEmail.Text;
-
-                if (Application["userLoginList"] != null)
-                {
-                    userLoginList = Application["userLoginList"] as List<String>;
-                }
-                userLoginList.Add(inputEmail.Text);
-                Application["userLoginList"] = userLoginList;
-                Session["userLogin"] = inputEmail.Text;
-                Response.Redirect("Home.aspx");
-
-            }
+            if (member == null) Response.Write("Not Found");
             else
             {
-                errorMessage.Text = "User not Found!";
-                this.errorMessage.ForeColor = Color.Red;
+                Session["user"] = member;
+                
+                Response.Redirect("Home.aspx");
             }
-
         }
+
     }
+
 }

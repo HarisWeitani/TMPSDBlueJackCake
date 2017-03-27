@@ -97,3 +97,11 @@ D:\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.CodeDom.Providers.DotNetCompiler
 D:\TMPSDBlueJackCake\BlueJackCake\obj\Debug\BlueJackCake.csprojResolveAssemblyReference.cache
 D:\TMPSDBlueJackCake\BlueJackCake\obj\Debug\BlueJackCake.dll
 D:\TMPSDBlueJackCake\BlueJackCake\obj\Debug\BlueJackCake.pdb
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\EntityFramework.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\EntityFramework.SqlServer.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\EntityFramework.xml
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\EntityFramework.SqlServer.xml
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AspNet.Identity.EntityFramework.xml
