@@ -12,7 +12,7 @@
     <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="MemberDatabaseEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="MemberDatabaseEntities2" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Members" EntityType="Self.Member" />
   </EntityContainer>
 </Schema>

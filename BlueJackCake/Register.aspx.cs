@@ -1,5 +1,4 @@
-﻿using BlueJackCake.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,29 +6,56 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace BlueJackCake
-{ 
+{
 
     public partial class Register : System.Web.UI.Page
     {
-        String DOB;
-
-        DatabaseHelper con;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            con = new DatabaseHelper();
+
         }
 
         protected void registerBtn_Click(object sender, EventArgs e)
         {
-            DOB = DateTime.Parse(userDOB.Text).ToString("yyyy-MM-dd");
 
-            //tutorial sql C#
-            String query = "INSERT INTO Member(Email,Password,Name,DOB,PhoneNumber,Address) VALUES('"+inputEmail.Text+"' , '"+inputPassword.Text+ "' , '"+inputName.Text+ "' , '"+DOB+ "' , '"+inputPhoneNumber.Text+ "' , '"+inputAddress.Text+"' ) ";
+            string name = inputName.Text;
+            string email = inputEmail.Text;
+            string password = inputPassword.Text;
+            string cPassword = confirmPassword.Text;
+            string phone = inputPhoneNumber.Text;
+            string address = inputAddress.Text;
+            System.DateTime dob;
 
-            con.ExecuteUpdate(query);
+            txtError.Text = "";
+            txtError.ForeColor = System.Drawing.Color.Red;
 
-            Response.Write("Register Success");
+            if (!DateTime.TryParse(inputDOB.Text, out dob)) txtError.Text = "DOB is Wrong";
+            else if (name == "") txtError.Text = "Name Must Not Empty";
+            else if (email == "") txtError.Text = "Email Must Not Empty";
+            else if (emailValidate.checkEmail(email) == false) txtError.Text = "Wrong Email Format";
+            else if (password == "") txtError.Text = "Password Must Not Empty";
+            else if (cPassword != password) txtError.Text = "Password Not Match";
+            else if (phone == "") txtError.Text = "Phone Must Not Empty";
+            else if (address == "") txtError.Text = "Address Must Not Empty";
+            else
+            {
+                Member m = UserFactory.create(email, password, name, dob, phone, address);
+
+                int row = DatabaseRepositories.register(m);
+                if (row > 0)
+                {
+                    txtError.ForeColor = System.Drawing.Color.Blue;
+                    txtError.Text = "Register Success";
+                }
+                else
+                {
+                    txtError.Text = "Register Failed";
+                }
+
+            }
+
+
 
         }
     }

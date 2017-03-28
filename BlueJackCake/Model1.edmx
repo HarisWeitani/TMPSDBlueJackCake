@@ -37,7 +37,7 @@
           <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="MemberDatabaseEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="MemberDatabaseEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Members" EntityType="Self.Member" />
         </EntityContainer>
       </Schema>
@@ -45,7 +45,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MemberDatabaseModelStoreContainer" CdmEntityContainer="MemberDatabaseEntities1">
+        <EntityContainerMapping StorageEntityContainer="MemberDatabaseModelStoreContainer" CdmEntityContainer="MemberDatabaseEntities2">
           <EntitySetMapping Name="Members">
             <EntityTypeMapping TypeName="MemberDatabaseModel.Member">
               <MappingFragment StoreEntitySet="Member">

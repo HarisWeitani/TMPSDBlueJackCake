@@ -59,10 +59,10 @@
             <td>Date Of Birth</td>
             <td>:</td>
             <td>
-                <asp:TextBox ID="userDOB" runat="server" TextMode="Date"></asp:TextBox>
+                <asp:TextBox ID="inputDOB" runat="server" TextMode="Date"></asp:TextBox>
                 <br />
-                <asp:RequiredFieldValidator ID="dobVal" runat="server" ControlToValidate="userDOB" Display="Dynamic"
-                     ErrorMessage="Enter Your DOB" ValidationGroup="Register"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="dobVal" runat="server" ControlToValidate="inputDOB" Display="Dynamic"
+                    ErrorMessage="Enter Your DOB" ValidationGroup="Register"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -89,6 +89,7 @@
         </tr>
         <tr>
             <td>
+                <asp:Label ID="txtError" runat="server" Text=""></asp:Label>
                 <asp:Button ID="registerBtn" runat="server" Text="Register" OnClick="registerBtn_Click" />
             </td>
         </tr>

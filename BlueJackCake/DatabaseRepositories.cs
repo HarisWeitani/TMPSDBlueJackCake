@@ -7,7 +7,7 @@ namespace BlueJackCake
 {
     public class DatabaseRepositories
     {
-        private static MemberDatabaseEntities1 db = new MemberDatabaseEntities1();
+        private static MemberDatabaseEntities2 db = new MemberDatabaseEntities2();
 
         public static List<Member> getAllMember()
         {
@@ -19,6 +19,12 @@ namespace BlueJackCake
             return db.Members.Where(m => m.Email == email && m.Password == password).FirstOrDefault();
         }
 
+        public static int register(Member m)
+        {
+            db.Members.Add(m);
+            return db.SaveChanges();
+        }
+        
 
 
     }
