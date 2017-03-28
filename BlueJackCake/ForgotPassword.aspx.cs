@@ -24,7 +24,23 @@ namespace BlueJackCake
             if (member == null) txtError.Text = "Email Not Found";
             else
             {
-                Response.Write("mantab");
+                string name = member.Name;
+                string newPassword;
+
+                const string alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+                Random rand = new Random((int)DateTime.Now.Ticks);
+
+                string number1 = rand.Next(0, 9).ToString();
+                string number2 = rand.Next(0, 9).ToString();
+                string char1 = alphabet.Substring(rand.Next(0, alphabet.Length - 1), 1);
+                string char2 = alphabet.Substring(rand.Next(0, alphabet.Length - 1), 1);
+                string cutName = name.Substring(0, 2);
+
+                newPassword = number1 + number2 + char1 + char2 +cutName;
+
+                txtError.ForeColor = System.Drawing.Color.Green;
+                txtError.Text = "Your New Password : "+newPassword;
             }
 
         }
