@@ -112,9 +112,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\MyDatabase.mdf" />
-    <Content Include="App_Data\MyDatabase_log.ldf">
-      <DependentUpon>MyDatabase.mdf</DependentUpon>
+    <Content Include="App_Data\CakeDatabase.mdf" />
+    <Content Include="App_Data\CakeDatabase_log.ldf">
+      <DependentUpon>CakeDatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\MemberDatabase.mdf" />
+    <Content Include="App_Data\MemberDatabase_log.ldf">
+      <DependentUpon>MemberDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -205,6 +209,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

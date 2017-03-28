@@ -1,5 +1,4 @@
-﻿using BlueJackCake.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -14,7 +13,14 @@ namespace BlueJackCake
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["user"] != null) Response.Redirect("Home.aspx");
+            if (!Page.IsPostBack)
+            {
+                if (Session["user"] != null) Response.Redirect("Home.aspx");
+                if (Request.Cookies["UserCookies"] != null)
+                {
+                    inputEmail.Text = Request.Cookies["UserCookies"].Value;
+                }
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -25,6 +31,17 @@ namespace BlueJackCake
             if (member == null) Response.Write("Not Found");
             else
             {
+                if (isRemember.Checked)
+                {
+                    Response.Cookies["UserCookies"].Expires = DateTime.Now.AddHours(1);
+                }
+                else
+                {
+                    Response.Cookies["UserCookies"].Expires = DateTime.Now.AddHours(-1);
+                }
+                Response.Cookies["UserCookies"].Value = inputEmail.Text;
+
+
                 Session["user"] = member;
                 
                 Response.Redirect("Home.aspx");

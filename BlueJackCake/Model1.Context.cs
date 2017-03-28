@@ -13,10 +13,10 @@ namespace BlueJackCake
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MyDatabaseEntities : DbContext
+    public partial class MemberDatabaseEntities1 : DbContext
     {
-        public MyDatabaseEntities()
-            : base("name=MyDatabaseEntities")
+        public MemberDatabaseEntities1()
+            : base("name=MemberDatabaseEntities1")
         {
         }
     

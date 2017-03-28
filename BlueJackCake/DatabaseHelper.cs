@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
+//obsolate
 namespace BlueJackCake.Helpers
 {
     public class DatabaseHelper

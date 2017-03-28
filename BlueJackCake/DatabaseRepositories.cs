@@ -7,14 +7,14 @@ namespace BlueJackCake
 {
     public class DatabaseRepositories
     {
-        private static MyDatabaseEntities db = new MyDatabaseEntities();
+        private static MemberDatabaseEntities1 db = new MemberDatabaseEntities1();
 
         public static List<Member> getAllMember()
         {
             return db.Members.ToList<Member>();
         }
 
-        public static Member LoginUser(String email, String password)
+        public static Member LoginUser(string email, string password)
         {
             return db.Members.Where(m => m.Email == email && m.Password == password).FirstOrDefault();
         }
