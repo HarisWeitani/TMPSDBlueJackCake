@@ -89,6 +89,7 @@
         <tr>
             <td>
                 <asp:Label ID="txtError" runat="server" Text=""></asp:Label>
+                <br />
                 <asp:Button ID="registerBtn" runat="server" Text="Register" OnClick="registerBtn_Click" />
             </td>
         </tr>

@@ -16,6 +16,14 @@ namespace BlueJackCake
 
         }
 
+        static bool checkEmail(string email)
+        {
+            if (email.Split('@').Length != 2) return false;
+            else if (email.IndexOf(".") == email.IndexOf("@") - 1) return false;
+            else if (email.IndexOf(".") == email.IndexOf("@") + 1) return false;
+            return true;
+        }
+
         protected void registerBtn_Click(object sender, EventArgs e)
         {
 
@@ -33,7 +41,7 @@ namespace BlueJackCake
             if (!DateTime.TryParse(inputDOB.Text, out dob)) txtError.Text = "DOB is Wrong";
             else if (name == "") txtError.Text = "Name Must Not Empty";
             else if (email == "") txtError.Text = "Email Must Not Empty";
-            else if (emailValidate.checkEmail(email) == false) txtError.Text = "Wrong Email Format";
+            else if (checkEmail(email) == false) txtError.Text = "Wrong Email Format";
             else if (password == "") txtError.Text = "Password Must Not Empty";
             else if (cPassword != password) txtError.Text = "Password Not Match";
             else if (phone == "") txtError.Text = "Phone Must Not Empty";
@@ -54,9 +62,6 @@ namespace BlueJackCake
                 }
 
             }
-
-
-
         }
     }
 }
