@@ -16,7 +16,7 @@ namespace BlueJackCake
 
         protected void inputResetPassword_Click(object sender, EventArgs e)
         {
-            Member member = DatabaseRepositories.ForgotPassword(inputemail.Text);
+            Member member = DatabaseRepositories.findEmail(inputemail.Text);
 
             txtError.Text = "";
             txtError.ForeColor = System.Drawing.Color.Red;

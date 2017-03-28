@@ -31,7 +31,9 @@
                 <asp:HyperLink ID="hlCake" runat="server">Cake</asp:HyperLink>
                 <asp:HyperLink ID="hlAddCake" runat="server">Add Cake</asp:HyperLink>
                 <asp:HyperLink ID="hlUpdateCake" runat="server" >Update Cake</asp:HyperLink>
-                <asp:HyperLink ID="hlViewCustomer" runat="server" >View Customer</asp:HyperLink>
+
+                <asp:HyperLink ID="hlViewCustomer" runat="server" NavigateUrl="~/ViewCustomer.aspx" >View Customer</asp:HyperLink>
+
                 <asp:HyperLink ID="hlLogOut" runat="server">Log Out</asp:HyperLink>
             </div>
         </nav>

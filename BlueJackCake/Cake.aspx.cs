@@ -9,6 +9,11 @@ namespace BlueJackCake
 {
     public partial class Cake : System.Web.UI.Page
     {
+        void loadData()
+        {
+
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 

@@ -7,6 +7,7 @@ namespace BlueJackCake
 {
     public class DatabaseRepositories
     {
+        //member
         private static MemberDatabaseEntities2 db = new MemberDatabaseEntities2();
 
         public static List<Member> getAllMember()
@@ -30,9 +31,15 @@ namespace BlueJackCake
             return db.SaveChanges();
         }
 
-        public static Member ForgotPassword(string email)
+        public static Member findEmail(string email)
         {
             return db.Members.Find(email);
+        }
+
+        public static int deleteMember(Member m)
+        {
+            db.Members.Remove(m);
+            return db.SaveChanges();
         }
 
         public static void updateMember(Member m, string password)
@@ -47,6 +54,30 @@ namespace BlueJackCake
                 updateMember(m, password);
             }
             return db.SaveChanges();
+        }
+
+        //cake
+        private static CakeDatabaseEntities1 cakeDb = new CakeDatabaseEntities1();
+
+        public static List<Product> getAllProduct()
+        {
+            return cakeDb.Products.ToList<Product>();
+        }
+
+        public static List<Product> getAllProduct(string cname)
+        {
+            return cakeDb.Products.Where(c => c.CakeName == cname).ToList<Product>();
+        }
+
+        public static Product getProduct(string cname)
+        {
+            return cakeDb.Products.Find(cname);
+        }
+
+        public static int deleteProduct(Product product)
+        {
+            cakeDb.Products.Remove(product);
+            return cakeDb.SaveChanges();
         }
 
 
