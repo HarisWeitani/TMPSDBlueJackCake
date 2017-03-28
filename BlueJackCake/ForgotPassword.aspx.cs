@@ -41,6 +41,10 @@ namespace BlueJackCake
 
                 txtError.ForeColor = System.Drawing.Color.Green;
                 txtError.Text = "Your New Password : "+newPassword;
+
+                List<Member> m = DatabaseRepositories.getAllMember(inputemail.Text);
+                int row = DatabaseRepositories.updateMember(m, newPassword);
+
             }
 
         }
