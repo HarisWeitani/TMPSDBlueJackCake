@@ -29,12 +29,10 @@
                 Remember Me
             </td>
         </tr>
-
-        <tr>
-            <asp:Label ID="errorMessage" runat="server" Text=""></asp:Label>
-        </tr>
     </table>
 
+    <asp:Label ID="txtError" runat="server" Text=""></asp:Label>
+    <br />
     <asp:Button ID="btnLogin" Text="Login" OnClick="btnLogin_Click" runat="server" />
 
 

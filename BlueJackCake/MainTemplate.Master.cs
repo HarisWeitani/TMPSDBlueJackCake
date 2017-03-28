@@ -11,7 +11,14 @@ namespace BlueJackCake
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Member currentUser = (Member)Session["user"];
+            if (currentUser != null)
+            {
+                userName.Text = currentUser.Name;
+                userType.Text = currentUser.Type;
+            }
+            currentDateTime.Text = DateTime.Now.ToString();
         }
+
     }
 }

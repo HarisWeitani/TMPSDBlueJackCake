@@ -25,7 +25,10 @@ namespace BlueJackCake
             return db.SaveChanges();
         }
         
-
+        public static Member ForgotPassword(string email)
+        {
+            return db.Members.Find(email);
+        }
 
     }
 }

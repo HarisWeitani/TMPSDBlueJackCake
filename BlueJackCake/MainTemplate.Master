@@ -10,19 +10,32 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <header>
-            <h1>Blue Jack Cake
-            </h1>
-            <strong>Welcome to Blue Jack Cake
-            </strong>
+            <h1>Blue Jack Cake</h1>
+            <strong>Welcome to Blue Jack Cake,</strong>
+            <asp:Label ID="userType" runat="server" Text=""></asp:Label>
+            <asp:Label ID="userName" runat="server" Text=""></asp:Label>
+            <br />
+            <asp:Label ID="currentDateTime" runat="server" Text=""></asp:Label>
             <hr />
         </header>
 
         <nav>
-            <a href="Home.aspx">Home</a>
+            <div>
+                <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                <asp:HyperLink ID="hlLogin" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
+                <asp:HyperLink ID="hlRegister" runat="server" NavigateUrl="~/Register.aspx">Register</asp:HyperLink>
+                <asp:HyperLink ID="hlForgotPassword" runat="server" NavigateUrl="~/ForgotPassword.aspx">Forgot Password</asp:HyperLink>
+                
+                <asp:HyperLink ID="hlCake" runat="server">Cake</asp:HyperLink>
+                <asp:HyperLink ID="hlAddCake" runat="server">Add Cake</asp:HyperLink>
+                <asp:HyperLink ID="hlUpdateCake" runat="server" >Update Cake</asp:HyperLink>
+                <asp:HyperLink ID="hlViewCustomer" runat="server" >View Customer</asp:HyperLink>
+                <asp:HyperLink ID="hlLogOut" runat="server">Log Out</asp:HyperLink>
+            </div>
         </nav>
-
+        <hr />
 
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

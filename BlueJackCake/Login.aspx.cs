@@ -28,7 +28,11 @@ namespace BlueJackCake
 
             Member member = DatabaseRepositories.LoginUser(inputEmail.Text, inputPassword.Text);
 
-            if (member == null) Response.Write("Not Found");
+            txtError.Text = "";
+            txtError.ForeColor = System.Drawing.Color.Red;
+
+
+            if (member == null) txtError.Text = "User Not Found";
             else
             {
                 if (isRemember.Checked)
@@ -41,9 +45,8 @@ namespace BlueJackCake
                 }
                 Response.Cookies["UserCookies"].Value = inputEmail.Text;
 
-
                 Session["user"] = member;
-                
+
                 Response.Redirect("Home.aspx");
             }
         }
