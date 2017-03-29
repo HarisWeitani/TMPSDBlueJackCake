@@ -105,3 +105,11 @@ C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\T
 C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\EntityFramework.SqlServer.xml
 C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Haris Weitani\Desktop\Binus\TUGAS\TM PSD SBLN UTS\PSD PRoject BFR UTS\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\TMPSDBlueJackCake\BlueJackCake\bin\EntityFramework.dll
+D:\TMPSDBlueJackCake\BlueJackCake\bin\EntityFramework.SqlServer.dll
+D:\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AspNet.Identity.Core.dll
+D:\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\TMPSDBlueJackCake\BlueJackCake\bin\EntityFramework.xml
+D:\TMPSDBlueJackCake\BlueJackCake\bin\EntityFramework.SqlServer.xml
+D:\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AspNet.Identity.Core.xml
+D:\TMPSDBlueJackCake\BlueJackCake\bin\Microsoft.AspNet.Identity.EntityFramework.xml

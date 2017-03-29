@@ -56,29 +56,7 @@ namespace BlueJackCake
             return db.SaveChanges();
         }
 
-        //cake
-        private static CakeDatabaseEntities1 cakeDb = new CakeDatabaseEntities1();
 
-        public static List<Product> getAllProduct()
-        {
-            return cakeDb.Products.ToList<Product>();
-        }
-
-        public static List<Product> getAllProduct(string cname)
-        {
-            return cakeDb.Products.Where(c => c.CakeName == cname).ToList<Product>();
-        }
-
-        public static Product getProduct(string cname)
-        {
-            return cakeDb.Products.Find(cname);
-        }
-
-        public static int deleteProduct(Product product)
-        {
-            cakeDb.Products.Remove(product);
-            return cakeDb.SaveChanges();
-        }
 
 
     }

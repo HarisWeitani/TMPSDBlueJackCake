@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="CakeDatabaseModelStoreContainer" CdmEntityContainer="CakeDatabaseEntities">
-    <EntitySetMapping Name="Tables">
-      <EntityTypeMapping TypeName="CakeDatabaseModel.Table">
-        <MappingFragment StoreEntitySet="Table">
+  <EntityContainerMapping StorageEntityContainer="CakeDatabaseModelStoreContainer" CdmEntityContainer="CakeDatabaseEntities1">
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="CakeDatabaseModel.Product">
+        <MappingFragment StoreEntitySet="Product">
           <ScalarProperty Name="CakeName" ColumnName="CakeName" />
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Stock" ColumnName="Stock" />

@@ -112,25 +112,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\CakeDatabase.mdf" />
-    <Content Include="App_Data\CakeDatabase_log.ldf">
-      <DependentUpon>CakeDatabase.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\MemberDatabase.mdf" />
     <Content Include="App_Data\MemberDatabase_log.ldf">
       <DependentUpon>MemberDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="Cake.aspx" />
-    <Content Include="Cake.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Cake.edmx</DependentUpon>
-      <LastGenOutput>Cake.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Cake.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Cake.edmx</DependentUpon>
-      <LastGenOutput>Cake.cs</LastGenOutput>
-    </Content>
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -155,13 +141,6 @@
     <Content Include="Member.edmx.diagram">
       <DependentUpon>Member.edmx</DependentUpon>
     </Content>
-    <EntityDeploy Include="Cake.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Cake.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Cake.edmx.diagram">
-      <DependentUpon>Cake.edmx</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -183,31 +162,12 @@
     <Compile Include="Cake.aspx.designer.cs">
       <DependentUpon>Cake.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cake.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Cake.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Cake.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Cake.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Cake.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Cake.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="CakeFactory.cs" />
     <Compile Include="ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Product.cs">
-      <DependentUpon>Cake.tt</DependentUpon>
     </Compile>
     <Compile Include="UserFactory.cs" />
     <Compile Include="DatabaseRepositories.cs" />
