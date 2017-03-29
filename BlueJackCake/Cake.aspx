@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainTemplate.Master" AutoEventWireup="true" CodeBehind="Cake.aspx.cs" Inherits="BlueJackCake.Cake" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -13,7 +14,7 @@
                         <asp:BoundField DataField="CakeName" HeaderText="Cake Name" />
                         <asp:BoundField DataField="Price" HeaderText="Price" />
                         <asp:BoundField DataField="Stock" HeaderText="Stock" />
-                        <asp:BoundField DataField="Picture" HeaderText="Picture" />
+                        <asp:ImageField DataImageUrlField="Picture" HeaderText="Pic"></asp:ImageField>
                         <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete Cake" />
 
                     </Columns>

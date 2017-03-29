@@ -27,9 +27,9 @@
                 <asp:HyperLink ID="hlLogin" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
                 <asp:HyperLink ID="hlRegister" runat="server" NavigateUrl="~/Register.aspx">Register</asp:HyperLink>
                 <asp:HyperLink ID="hlForgotPassword" runat="server" NavigateUrl="~/ForgotPassword.aspx">Forgot Password</asp:HyperLink>
-                
-                <asp:HyperLink ID="hlCake" runat="server">Cake</asp:HyperLink>
-                <asp:HyperLink ID="hlAddCake" runat="server">Add Cake</asp:HyperLink>
+                <asp:HyperLink ID="hlCake" runat="server" NavigateUrl="~/Cake.aspx">Cake</asp:HyperLink>
+                <asp:HyperLink ID="hlAddCake" runat="server" NavigateUrl="~/CakeAdd.aspx" >Add Cake</asp:HyperLink>
+
                 <asp:HyperLink ID="hlUpdateCake" runat="server" >Update Cake</asp:HyperLink>
 
                 <asp:HyperLink ID="hlViewCustomer" runat="server" NavigateUrl="~/ViewCustomer.aspx" >View Customer</asp:HyperLink>

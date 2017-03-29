@@ -72,6 +72,7 @@ namespace BlueJackCake
         public static int addCake(Cake c)
         {
             db.Cakes.Add(c);
+            db.Configuration.ValidateOnSaveEnabled = false;
             return db.SaveChanges();
         }
 

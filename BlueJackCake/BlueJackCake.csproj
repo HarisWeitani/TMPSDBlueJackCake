@@ -117,6 +117,8 @@
       <DependentUpon>MemberDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="Cake.aspx" />
+    <Content Include="CakeAdd.aspx" />
+    <Content Include="CakeUpdate.aspx" />
     <Content Include="Entity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Entity.edmx</DependentUpon>
@@ -169,7 +171,21 @@
     <Compile Include="Cake.Designer.cs">
       <DependentUpon>Cake.cs</DependentUpon>
     </Compile>
+    <Compile Include="CakeAdd.aspx.cs">
+      <DependentUpon>CakeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CakeAdd.aspx.designer.cs">
+      <DependentUpon>CakeAdd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CakeFactory.cs" />
+    <Compile Include="CakeUpdate.aspx.cs">
+      <DependentUpon>CakeUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CakeUpdate.aspx.designer.cs">
+      <DependentUpon>CakeUpdate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Entity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
