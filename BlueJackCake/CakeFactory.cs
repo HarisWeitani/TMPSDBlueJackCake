@@ -7,6 +7,15 @@ namespace BlueJackCake
 {
     public class CakeFactory
     {
-//public static Product make(string cakeName, int price, int stock , string )
+        public static Cake create(string cakeName, int cakePrice, int cakeStock, string cakePic)
+        {
+            return new Cake()
+            {
+                CakeName = cakeName,
+                Price = cakePrice,
+                Stock = cakeStock,
+                Picture = cakePic
+            };
+        }
     }
 }

@@ -21,14 +21,8 @@ namespace BlueJackCake
             loadData();
         }
 
-        protected void btnDelete_Click(object sender, EventArgs e)
-        {
-            Member m = DatabaseRepositories.findEmail(deleteMember.Text);
-        }
-
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            //blom bisa load otomatis
             if (e.CommandName == "Delete")
             {
                 //biar tau dia row ke berapa
@@ -42,6 +36,11 @@ namespace BlueJackCake
                 if (row > 0)
                 {
                     Response.Redirect("ViewCustomer.aspx");
+                }
+                else
+                {
+                    errorText.ForeColor = System.Drawing.Color.Red;
+                    errorText.Text = "Delete Failed";
                 }
 
             }

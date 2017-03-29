@@ -7,8 +7,9 @@ namespace BlueJackCake
 {
     public class DatabaseRepositories
     {
+        private static DatabaseEntities db = new DatabaseEntities();
+
         //member
-        private static MemberDatabaseEntities2 db = new MemberDatabaseEntities2();
 
         public static List<Member> getAllMember()
         {
@@ -56,8 +57,50 @@ namespace BlueJackCake
             return db.SaveChanges();
         }
 
+        //cake
 
+        public static List<Cake> getAllCake()
+        {
+            return db.Cakes.ToList<Cake>();
+        }
 
+        public static List<Cake> getAllCake(string cakeName)
+        {
+            return db.Cakes.Where(c => c.CakeName == cakeName).ToList<Cake>();
+        }
 
+        public static int addCake(Cake c)
+        {
+            db.Cakes.Add(c);
+            return db.SaveChanges();
+        }
+
+        public static Cake findCake(string cakeName)
+        {
+            return db.Cakes.Find(cakeName);
+        }
+
+        public static int deleteCake(Cake c)
+        {
+            db.Cakes.Remove(c);
+            return db.SaveChanges();
+        }
+
+        public static void updateCake(Cake c, string cakeName, int cakePrice, int cakeStock, string cakePic)
+        {
+            c.CakeName = cakeName;
+            c.Price = cakePrice;
+            c.Stock = cakeStock;
+            c.Picture = cakePic;
+        }
+
+        public static int updateCake(List<Cake> cake, string cakeName, int cakePrice, int cakeStock, string cakePic)
+        {
+            foreach (Cake c in cake)
+            {
+                updateCake(c, cakeName, cakePrice, cakeStock, cakePic);
+            }
+            return db.SaveChanges();
+        }
     }
 }
