@@ -1,3 +1,0 @@
-buat image
-    <%-- atur width sama heigt disini --%>
-<asp:ImageField DataImageUrlField="Email" HeaderText="Pic"></asp:ImageField>

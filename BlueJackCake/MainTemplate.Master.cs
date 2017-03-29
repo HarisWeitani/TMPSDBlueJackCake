@@ -12,13 +12,70 @@ namespace BlueJackCake
         protected void Page_Load(object sender, EventArgs e)
         {
             Member currentUser = (Member)Session["user"];
-            if (currentUser != null)
+            if (currentUser == null)
+            {
+                guestPagesState(true);
+            }
+            else if (currentUser != null)
             {
                 userName.Text = currentUser.Name;
-                userType.Text = currentUser.Type;
+                if (currentUser.Type == "Admin")
+                {
+                    adminPagesState(true);
+                }
+                else if(currentUser.Type == "Customer")
+                {
+                    customerPagesState(true);
+                }
+
+                //userType.Text = currentUser.Type;
             }
             currentDateTime.Text = DateTime.Now.ToString();
         }
+
+        public void guestPagesState(bool state)
+        {
+            hlHome.Visible = state;
+            hlLogin.Visible = state;
+            hlRegister.Visible = state;
+            hlForgotPassword.Visible = state;
+            hlCake.Visible = state;
+
+            hlAddCake.Visible = !state;
+            hlUpdateCake.Visible = !state;
+            hlViewCustomer.Visible = !state;
+            hlLogOut.Visible = !state;
+        }
+
+        public void adminPagesState(bool state)
+        {
+            hlHome.Visible = state;
+            hlCake.Visible = state;
+            hlAddCake.Visible = state;
+            hlUpdateCake.Visible = state;
+            hlViewCustomer.Visible = state;
+            hlLogOut.Visible = state;
+
+            hlLogin.Visible = !state;
+            hlRegister.Visible = !state;
+            hlForgotPassword.Visible = !state;
+        }
+
+        public void customerPagesState(bool state)
+        {
+            hlHome.Visible = state;
+            hlCake.Visible = state;
+            hlLogOut.Visible = state;
+
+            hlLogin.Visible = !state;
+            hlAddCake.Visible = !state;
+            hlUpdateCake.Visible = !state;
+            hlViewCustomer.Visible = !state;
+            hlRegister.Visible = !state;
+            hlForgotPassword.Visible = !state;
+        }
+
+
 
     }
 }
