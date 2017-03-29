@@ -64,7 +64,7 @@ namespace BlueJackCake
                         string cakeName = inputCakeName.Text;
                         int cakePrice = Int32.Parse(inputPrice.Text);
                         int cakeStock = Int32.Parse(inputStock.Text);
-                        cakePic = "";
+                        cakePic = null;
 
                         Cake c = CakeFactory.create(cakeName, cakePrice, cakeStock, cakePic);
                         int row = DatabaseRepositories.addCake(c);

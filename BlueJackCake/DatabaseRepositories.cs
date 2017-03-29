@@ -101,6 +101,7 @@ namespace BlueJackCake
             {
                 updateCake(c, cakeName, cakePrice, cakeStock, cakePic);
             }
+            db.Configuration.ValidateOnSaveEnabled = false;
             return db.SaveChanges();
         }
     }
