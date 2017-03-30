@@ -4,15 +4,16 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MemberDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MemberDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cake">
           <Key>
-            <PropertyRef Name="CakeName" />
+            <PropertyRef Name="CakeId" />
           </Key>
+          <Property Name="CakeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CakeName" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Price" Type="int" Nullable="false" />
           <Property Name="Stock" Type="int" Nullable="false" />
-          <Property Name="Picture" Type="varchar(max)" />
+          <Property Name="Picture" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Member">
           <Key>
@@ -30,19 +31,19 @@
           <EntitySet Name="Cake" EntityType="Self.Cake" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MemberDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Cake">
           <Key>
-            <PropertyRef Name="CakeName" />
+            <PropertyRef Name="CakeId" />
           </Key>
           <Property Name="CakeName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Price" Type="Int32" Nullable="false" />
           <Property Name="Stock" Type="Int32" Nullable="false" />
-          <Property Name="Picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Picture" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CakeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="Member">
           <Key>
@@ -69,6 +70,7 @@
           <EntitySetMapping Name="Cakes">
             <EntityTypeMapping TypeName="MemberDatabaseModel.Cake">
               <MappingFragment StoreEntitySet="Cake">
+                <ScalarProperty Name="CakeId" ColumnName="CakeId" />
                 <ScalarProperty Name="CakeName" ColumnName="CakeName" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Stock" ColumnName="Stock" />

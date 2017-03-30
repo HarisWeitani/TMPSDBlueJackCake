@@ -78,7 +78,7 @@ namespace BlueJackCake
 
         public static Cake findCake(string cakeName)
         {
-            return db.Cakes.Find(cakeName);
+            return db.Cakes.Where(c => c.CakeName == cakeName).FirstOrDefault();
         }
 
         public static int deleteCake(Cake c)

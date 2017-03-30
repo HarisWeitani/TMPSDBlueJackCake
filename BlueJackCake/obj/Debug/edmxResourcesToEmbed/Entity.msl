@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Cakes">
       <EntityTypeMapping TypeName="MemberDatabaseModel.Cake">
         <MappingFragment StoreEntitySet="Cake">
+          <ScalarProperty Name="CakeId" ColumnName="CakeId" />
           <ScalarProperty Name="CakeName" ColumnName="CakeName" />
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Stock" ColumnName="Stock" />
