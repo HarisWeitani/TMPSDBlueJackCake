@@ -10,7 +10,7 @@
 
             <ContentTemplate>
                 <%-- autogenerate colums false =sesuai nama --%>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" OnRowCommand="GridView1_RowCommand">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" OnRowDeleting="GridView1_RowDeleting">
                     <Columns>
 
                         <asp:BoundField DataField="Name" HeaderText="Name" />

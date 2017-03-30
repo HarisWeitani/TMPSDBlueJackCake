@@ -14,7 +14,7 @@ namespace BlueJackCake
             Session.Abandon();
             Session.Clear();
             Session.RemoveAll();
-            Response.Redirect("Login.aspx");
+            Response.Redirect("Home.aspx");
         }
     }
 }

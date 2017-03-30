@@ -21,32 +21,24 @@ namespace BlueJackCake
             loadData();
         }
 
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            if (e.CommandName == "Delete")
+            string memberEmail = GridView1.Rows[e.RowIndex].Cells[1].Text;
+
+            Member m = DatabaseRepositories.findEmail(memberEmail);
+
+            int row = DatabaseRepositories.deleteMember(m);
+            if (row > 0)
             {
-                //biar tau dia row ke berapa
-                int index = Convert.ToInt32(e.CommandArgument);
-                GridViewRow selectedRow = GridView1.Rows[index];
-                TableCell email = selectedRow.Cells[0];
-
-                Member m = DatabaseRepositories.findEmail(email.Text);
-
-                int row = DatabaseRepositories.deleteMember(m);
-                if (row > 0)
-                {
-                    Response.Redirect("ViewCustomer.aspx");
-                }
-                else
-                {
-                    errorText.ForeColor = System.Drawing.Color.Red;
-                    errorText.Text = "Delete Failed";
-                }
-
+                Response.Redirect("ViewCustomer.aspx");
             }
-          
-        }
+            else
+            {
+                errorText.ForeColor = System.Drawing.Color.Red;
+                errorText.Text = "Delete Failed";
+            }
 
+        }
     }
-       
+
 }

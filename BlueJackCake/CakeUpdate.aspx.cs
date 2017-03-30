@@ -17,11 +17,11 @@ namespace BlueJackCake
 
             string cakeName = Request.QueryString["cakeName"];
 
-            if(cakeName != null)
+            if (cakeName != null)
             {
                 editCake = DatabaseRepositories.findCake(cakeName);
 
-                if(editCake != null) //check if cake exists
+                if (editCake != null) //check if cake exists
                 {
                     if (!Page.IsPostBack)
                     {
@@ -39,11 +39,13 @@ namespace BlueJackCake
             string cakePic;
 
             //Cake cake = DatabaseRepositories.findCake(inputCakeName.Text);
+            Cake cake = DatabaseRepositories.findCake(inputCakeName.Text);
 
             if (editCake == null) errorText.Text = "Cake Does Not Exist";
             else
             {
                 if (inputCakeName.Text == "") errorText.Text = "Input Cake Name";
+                else if (inputCakeName.Text != editCake.CakeName && cake != null) errorText.Text = "Cake Name Already Exist";
                 else if (inputPrice.Text == "") errorText.Text = "Cake Price Must Not Empty";
                 else if (inputStock.Text == "") errorText.Text = "Cake Stock Must Not Empty & Greater Than 0";
                 else
@@ -65,7 +67,7 @@ namespace BlueJackCake
 
                             List<Cake> c = DatabaseRepositories.getAllCake(editCake.CakeName);
                             int row = DatabaseRepositories.updateCake(c, cakeName, cakePrice, cakeStock, cakePic);
-                            
+
                         }
                         else
                         {
@@ -83,8 +85,8 @@ namespace BlueJackCake
                         int row = DatabaseRepositories.updateCake(c, cakeName, cakePrice, cakeStock, cakePic);
                     }
 
+                    Response.Redirect("Cake.aspx");
                 }
-                //Response.Redirect("Cake.aspx");
             }
 
 

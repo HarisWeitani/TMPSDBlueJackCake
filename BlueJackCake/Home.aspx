@@ -14,6 +14,7 @@
     <div>
         <h4>
             About New Promotion's
+            ALL ITEM DISKON 100%!!!!!!!!!!
         </h4>
     </div>
 </asp:Content>

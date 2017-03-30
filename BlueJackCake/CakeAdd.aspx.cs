@@ -11,7 +11,7 @@ namespace BlueJackCake
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //validasi admin
+
         }
 
         protected void btnAddCake_Click(object sender, EventArgs e)

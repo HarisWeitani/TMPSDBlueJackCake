@@ -9,40 +9,34 @@ namespace BlueJackCake
 {
     public partial class Cake : System.Web.UI.Page
     {
-        void loadData()
+        void loadDataAdmin()
         {
             GridView1.DataSource = DatabaseRepositories.getAllCake();
             GridView1.DataBind();
         }
 
-        protected void Page_Load(object sender, EventArgs e)
+        void loadDataCustomer()
         {
-            loadData();
+            GridView2.DataSource = DatabaseRepositories.getAllCake();
+            GridView2.DataBind();
         }
 
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            
-            if (e.CommandName == "Update")
-            {
-                int index = Convert.ToInt32(e.CommandArgument);
-                GridViewRow selectedRow = GridView1.Rows[index];
-                TableCell cakeName = selectedRow.Cells[0];
+            Member currentUser = (Member)Session["user"];
 
-                Cake c = DatabaseRepositories.findCake(cakeName.Text.ToString());
-
-                if (c != null)
-                {
-                    Response.Redirect("CakeUpdate.aspx");
-                }
-                else
-                {
-                    errorText.ForeColor = System.Drawing.Color.Red;
-                    errorText.Text = "Update Failed";
-
-                }
-
+            if(currentUser == null ){
+                loadDataCustomer();
             }
+            else if (currentUser.Type == "Admin")
+            {
+                loadDataAdmin();
+            }
+            else if(currentUser.Type == "Customer")
+            {
+                loadDataCustomer();
+            }
+
         }
 
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -69,6 +63,11 @@ namespace BlueJackCake
 
             Response.Redirect(string.Format("CakeUpdate.aspx?cakeName={0}", cakeName));
 
+        }
+
+        protected void btnAddCake_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CakeAdd.aspx");
         }
     }
 }

@@ -44,7 +44,7 @@ namespace BlueJackCake
                     Response.Cookies["UserCookies"].Expires = DateTime.Now.AddHours(-1);
                 }
                 Response.Cookies["UserCookies"].Value = inputEmail.Text;
-
+                
                 Session["user"] = member;
 
                 Response.Redirect("Home.aspx");

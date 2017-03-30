@@ -44,7 +44,7 @@ namespace BlueJackCake
             hlAddCake.Visible = !state;
             hlUpdateCake.Visible = !state;
             hlViewCustomer.Visible = !state;
-            logout.Visible = !state;
+            hlLogOut.Visible = !state;
         }
 
         public void adminPagesState(bool state)
@@ -54,7 +54,7 @@ namespace BlueJackCake
             hlAddCake.Visible = state;
             hlUpdateCake.Visible = state;
             hlViewCustomer.Visible = state;
-            logout.Visible = state;
+            hlLogOut.Visible = state;
 
             hlLogin.Visible = !state;
             hlRegister.Visible = !state;
@@ -65,7 +65,7 @@ namespace BlueJackCake
         {
             hlHome.Visible = state;
             hlCake.Visible = state;
-            logout.Visible = state;
+            hlLogOut.Visible = state;
 
             hlLogin.Visible = !state;
             hlAddCake.Visible = !state;
@@ -75,9 +75,5 @@ namespace BlueJackCake
             hlForgotPassword.Visible = !state;
         }
 
-        protected void logout_Click(object sender, EventArgs e)
-        {
-            //delete session
-        }
     }
 }
