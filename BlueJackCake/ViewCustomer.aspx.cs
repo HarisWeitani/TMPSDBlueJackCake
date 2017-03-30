@@ -30,7 +30,7 @@ namespace BlueJackCake
                 GridViewRow selectedRow = GridView1.Rows[index];
                 TableCell email = selectedRow.Cells[0];
 
-                Member m = DatabaseRepositories.findEmail(email.Text.ToString());
+                Member m = DatabaseRepositories.findEmail(email.Text);
 
                 int row = DatabaseRepositories.deleteMember(m);
                 if (row > 0)

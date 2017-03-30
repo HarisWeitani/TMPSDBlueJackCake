@@ -33,7 +33,8 @@
                 <asp:HyperLink ID="hlUpdateCake" runat="server" NavigateUrl="~/CakeUpdate.aspx" >Update Cake</asp:HyperLink>
                 <asp:HyperLink ID="hlViewCustomer" runat="server" NavigateUrl="~/ViewCustomer.aspx" >View Customer</asp:HyperLink>
 
-                <asp:HyperLink ID="hlLogOut" runat="server" NavigateUrl="~/LogOut.aspx" >Log Out</asp:HyperLink>
+                <%--<asp:HyperLink ID="hlLogOut" runat="server" NavigateUrl="~/LogOut.aspx" >Log Out</asp:HyperLink>--%>
+                <asp:LinkButton ID="logout" runat="server" OnClick="logout_Click"></asp:LinkButton>
             </div>
         </nav>
         <hr />
