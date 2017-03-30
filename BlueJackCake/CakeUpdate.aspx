@@ -51,7 +51,7 @@
             <td>
                 <asp:Label ID="errorText" runat="server" Text=""></asp:Label>
                 <br />
-                <asp:Button ID="btnUpdateCake" runat="server" Text="Add Cake" OnClick="btnUpdateCake_Click" />
+                <asp:Button ID="btnUpdateCake" runat="server" Text="Update Cake" OnClick="btnUpdateCake_Click" />
             </td>
         </tr>
 

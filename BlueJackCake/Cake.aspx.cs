@@ -22,7 +22,8 @@ namespace BlueJackCake
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if(e.CommandName == "Delete")
+            
+            if (e.CommandName == "Update")
             {
                 int index = Convert.ToInt32(e.CommandArgument);
                 GridViewRow selectedRow = GridView1.Rows[index];
@@ -30,19 +31,43 @@ namespace BlueJackCake
 
                 Cake c = DatabaseRepositories.findCake(cakeName.Text.ToString());
 
-                int row = DatabaseRepositories.deleteCake(c);
-                if (row > 0)
+                if (c != null)
                 {
-                    Response.Redirect("Cake.aspx");
+                    Response.Redirect("CakeUpdate.aspx");
                 }
                 else
                 {
                     errorText.ForeColor = System.Drawing.Color.Red;
-                    errorText.Text = "Delete Failed";
+                    errorText.Text = "Update Failed";
+
                 }
 
             }
+        }
 
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            string cakeName = GridView1.Rows[e.RowIndex].Cells[0].Text;
+
+            Cake c = DatabaseRepositories.findCake(cakeName);
+
+            int row = DatabaseRepositories.deleteCake(c);
+            if (row > 0)
+            {
+                Response.Redirect("Cake.aspx");
+            }
+            else
+            {
+                errorText.ForeColor = System.Drawing.Color.Red;
+                errorText.Text = "Delete Failed";
+            }
+        }
+
+        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            string cakeName = GridView1.Rows[e.RowIndex].Cells[0].Text;
+
+            Response.Redirect(string.Format("CakeUpdate.aspx?cakeName={0}", cakeName));
 
         }
     }

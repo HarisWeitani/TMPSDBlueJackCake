@@ -8,13 +8,14 @@
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
 
             <ContentTemplate>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" OnRowCommand="GridView1_RowCommand">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" OnRowUpdating="GridView1_RowUpdating" OnRowDeleting="GridView1_RowDeleting">
                     <Columns>
 
                         <asp:BoundField DataField="CakeName" HeaderText="Cake Name" />
                         <asp:BoundField DataField="Price" HeaderText="Price" />
                         <asp:BoundField DataField="Stock" HeaderText="Stock" />
                         <asp:ImageField DataImageUrlField="Picture" HeaderText="Pic"></asp:ImageField>
+                        <asp:ButtonField ButtonType="Button" CommandName="Update" Text="Update Cake" />
                         <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete Cake" />
 
                     </Columns>
