@@ -48,6 +48,7 @@ namespace BlueJackCake
                 else if (inputCakeName.Text != editCake.CakeName && cake != null) errorText.Text = "Cake Name Already Exist";
                 else if (inputPrice.Text == "") errorText.Text = "Cake Price Must Not Empty";
                 else if (inputStock.Text == "") errorText.Text = "Cake Stock Must Not Empty & Greater Than 0";
+                else if (Int32.Parse(inputStock.Text) <= 0) errorText.Text = "Cake Stock Must Not Empty & Greater Than 0";
                 else
                 {
                     if (this.uploadPicture.HasFile)
