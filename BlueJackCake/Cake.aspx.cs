@@ -26,14 +26,17 @@ namespace BlueJackCake
             Member currentUser = (Member)Session["user"];
 
             if(currentUser == null ){
+                btnAddCake.Visible = false;
                 loadDataCustomer();
             }
             else if (currentUser.Type == "Admin")
             {
+                btnAddCake.Visible = true;
                 loadDataAdmin();
             }
             else if(currentUser.Type == "Customer")
             {
+                btnAddCake.Visible = false;
                 loadDataCustomer();
             }
 

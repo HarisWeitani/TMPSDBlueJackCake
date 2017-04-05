@@ -10,17 +10,26 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-        <header>
-            <h1>Blue Jack Cake</h1>
-            <strong>Welcome to Blue Jack Cake,</strong>
-            <asp:Label ID="userType" runat="server" Text=""></asp:Label>
-            <asp:Label ID="userName" runat="server" Text=""></asp:Label>
-            <br />
-            <asp:Label ID="currentDateTime" runat="server" Text=""></asp:Label>
-            <hr />
-        </header>
-
+        <div>
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <asp:Timer ID="Timer1" runat="server" Interval="1000"></asp:Timer>
+            <header>
+                <h1>Blue Jack Cake</h1>
+                <strong>Welcome to Blue Jack Cake,</strong>
+                <asp:Label ID="userType" runat="server" Text=""></asp:Label>
+                <asp:Label ID="userName" runat="server" Text=""></asp:Label>
+                <br />
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+                    </Triggers>
+                    <ContentTemplate>
+                        <asp:Label ID="currentDateTime" runat="server" Text=""></asp:Label>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </header>
+        </div>
+        <hr />
         <nav>
             <div>
                 <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
@@ -29,11 +38,11 @@
                 <asp:HyperLink ID="hlForgotPassword" runat="server" NavigateUrl="~/ForgotPassword.aspx">Forgot Password</asp:HyperLink>
 
                 <asp:HyperLink ID="hlCake" runat="server" NavigateUrl="~/Cake.aspx">Cake</asp:HyperLink>
-                <asp:HyperLink ID="hlAddCake" runat="server" NavigateUrl="~/CakeAdd.aspx" >Add Cake</asp:HyperLink>
-                <asp:HyperLink ID="hlUpdateCake" runat="server" NavigateUrl="~/CakeUpdate.aspx" >Update Cake</asp:HyperLink>
-                <asp:HyperLink ID="hlViewCustomer" runat="server" NavigateUrl="~/ViewCustomer.aspx" >View Customer</asp:HyperLink>
+                <asp:HyperLink ID="hlAddCake" runat="server" NavigateUrl="~/CakeAdd.aspx">Add Cake</asp:HyperLink>
+                <asp:HyperLink ID="hlUpdateCake" runat="server" NavigateUrl="~/CakeUpdate.aspx">Update Cake</asp:HyperLink>
+                <asp:HyperLink ID="hlViewCustomer" runat="server" NavigateUrl="~/ViewCustomer.aspx">View Customer</asp:HyperLink>
 
-                <asp:HyperLink ID="hlLogOut" runat="server" NavigateUrl="~/LogOut.aspx" >Log Out</asp:HyperLink>
+                <asp:HyperLink ID="hlLogOut" runat="server" NavigateUrl="~/LogOut.aspx">Log Out</asp:HyperLink>
             </div>
         </nav>
         <hr />
